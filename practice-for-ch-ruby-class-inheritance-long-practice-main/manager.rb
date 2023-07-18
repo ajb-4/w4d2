@@ -4,7 +4,7 @@ class Manager < Employee
 
     attr_accessor :name, :title, :salary, :boss, :employees
 
-    def initialize
+    def initialize(name, title, salary, boss)
         @employees = []
         super(name, title, salary, boss)
     end
@@ -14,12 +14,16 @@ class Manager < Employee
     end
 
     def salary_sum
-        return @salary if @employees.empty?
-        sum = 0
+        # return @salary if @employees.empty?
+         sum = 0
         self.employees.each do |emp|
-            sum += emp.salary_sum
+            if emp.is_a?(Manager)
+                emp.salary_sum
+            else
+                return sum += salary
+            end
         end
-        sum
+         sum 
     end
 
 end
