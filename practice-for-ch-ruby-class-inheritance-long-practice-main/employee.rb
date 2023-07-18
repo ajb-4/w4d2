@@ -11,6 +11,15 @@ class Employee
         @boss = boss
     end
 
+    def bonus(multiplier)
+        #if non-manager(leaf) 
+        
+        bonus = self.salary * multiplier
+        #if manager(root-node)
+
+        bonus = self.employees.sum * multiplier
+    end
+
 
 
 end
