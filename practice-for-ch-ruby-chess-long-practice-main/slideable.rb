@@ -14,15 +14,20 @@ module Slideable
         [1,-1]
 ].freeze
 
+    def horizontals_dirs
+        HORIZANTAL_DIRS
+    end
+
+    def diagnols_dirs
+        DIAGNOLS_DIRS
+    end
+
+    
     def gum(direction)
         moves = []
 
         cur_y,cur_x = pos
         dy,dx = direction[0], direction[1]
-
-         loop do 
-
-
 
 
 
@@ -38,23 +43,6 @@ module Slideable
         end
 
         return moves
-    end
-
-end
-
-
-def test
-
-    arr = [1,2,3,4]
-
-    i = 0 
-
-    loop do 
-
-        p arr[i]
-        i += 1
-
-        break if i == arr.length - 1
     end
 
 end
