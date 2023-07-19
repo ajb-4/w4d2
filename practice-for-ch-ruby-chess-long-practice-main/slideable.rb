@@ -22,26 +22,29 @@ module Slideable
         DIAGNOLS_DIRS
     end
 
-    
-    def gum(direction)
+
+    def gum(dy, dx)
         moves = []
+        current_pos = self.pos
+        blocked = false
+        cur_y, cur_x = current_pos
+        
+        while !blocked#we reach OB or our color, or opp_color: then break
+            current_pos = [cur_y + dy, cur_x + dx]     
+            if 
 
-        cur_y,cur_x = pos
-        dy,dx = direction[0], direction[1]
 
-
-
+        new_pos = (cur_y + dy), (cur_x + dx)
+            end
+        
     end
 
-    def moves(direction_array)
+    def moves
         moves = []
-
-        direction_array.each do |dir|
-            # shovel in to moves gum with dir as the argument
-            moves << gum(dir)
-
+        move_dirs.each do |dir|
+            dy, dx = dir
+            moves << gum(dy, dx)
         end
-
         return moves
     end
 

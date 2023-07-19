@@ -4,4 +4,9 @@ class Rook < Piece
     def initialize(color, board, pos)
         super(color, board, pos)
     end
+
+    def move_dirs
+        horizontals_dirs
+    end
+
 end
