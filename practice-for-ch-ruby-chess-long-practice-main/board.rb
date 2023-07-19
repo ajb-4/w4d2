@@ -26,10 +26,10 @@ class Board
     end
 
     def move_piece(start_pos,end_pos)
+        #after nullpiece is completed change line 32 and 30 to .empty?
+        raise "There is no piece here" if self[start_pos].empty? || self[start_pos].nil?
 
-        raise "There is no piece here" if self[start_pos].empty?
-
-        raise "Position already occupied" if !self[end_pos].nil?
+        raise "Position already occupied" if !self[end_pos].nil? || !self[end_pos].empty?
 
         piece = self[start_pos]
 

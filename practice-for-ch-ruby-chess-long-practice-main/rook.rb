@@ -1,5 +1,5 @@
 require_relative "piece"
-class KnightKing < Piece
+class Rook < Piece
     attr_accessor :color, :board, :pos
     def initialize(color, board, pos)
         super(color, board, pos)
